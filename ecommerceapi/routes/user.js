@@ -8,12 +8,20 @@ const router = require("express").Router()
 // UPDATE
 router.put("/:id",verifyTokenAndAuthorization,async (req,res)=>{
     if(req.body.password){
+<<<<<<< HEAD
         req.body.password = CryptoJS.AES.encrypt(
+=======
+        // req.body.password = CryptoJS.AES.encrypt(
+>>>>>>> new
             req.body.password = CryptoJS.AES.encrypt(
                 req.body.password,
                 process.env.PASS_SEC
             ).toString()
+<<<<<<< HEAD
         )
+=======
+        // )
+>>>>>>> new
     }
 
     try{
@@ -72,7 +80,11 @@ router.get("/", verifyTokenAndAdmin, async(req,res)=>{
 
 router.get("/stats", verifyTokenAndAdmin, async(req,res)=>{
     const date = new Date();
+<<<<<<< HEAD
     const lastYear = new Date(date.setFullYear(date.setFullYear()- 1))
+=======
+    const lastYear = new Date(date.setFullYear(date.getFullYear()- 1))
+>>>>>>> new
 
     try{
 

@@ -68,6 +68,10 @@ router.get("/find/:id", async(req,res)=>{
 router.get("/", async(req,res)=>{
     const qNew = req.query.new
     const qCategory = req.query.category
+<<<<<<< HEAD
+=======
+    console.log(qCategory)
+>>>>>>> new
     try{
         let products;
         if(qNew){
@@ -75,6 +79,7 @@ router.get("/", async(req,res)=>{
                 createdAt: -1
             }).limit(5)
         }else if(qCategory){
+<<<<<<< HEAD
             products = await Product.find({categories:{
                 $in: [qCategory]
             }});
@@ -83,6 +88,22 @@ router.get("/", async(req,res)=>{
         }
         
         res.status(200).json(products);
+=======
+            console.log(qCategory)
+            products = await Product.find(
+                {categories:{
+                $in: [qCategory]
+            }});
+
+            // const products = await Product.find({ categories: qCategory });
+            console.log(products)
+        }else{
+            products = await Product.find(); 
+        }
+        console.log("joy",products)
+        
+        return res.status(200).json(products);
+>>>>>>> new
 
         
 

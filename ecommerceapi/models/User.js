@@ -14,6 +14,10 @@ const userSchema = new mongoose.Schema(
             default: false,
         },
         img:{type:String}
+<<<<<<< HEAD
+=======
+        
+>>>>>>> new
     
     }, {
         timestamps: true

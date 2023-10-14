@@ -20,7 +20,11 @@ const OrderSchema = new mongoose.Schema(
         ],
         amount: {type:Number, required: true},
         address: {type: Object, required: true},
+<<<<<<< HEAD
         status:{type:String, default: "pending"}
+=======
+        status:{type:String, default: "pending"},
+>>>>>>> new
     
        
     

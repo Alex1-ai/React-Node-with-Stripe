@@ -8,6 +8,10 @@ const dotenv = require("dotenv")
 const userRoute = require("./routes/user")
 const authRoute = require("./routes/auth")
 const productRoute = require("./routes/product")
+<<<<<<< HEAD
+=======
+const categoryRoute = require("./routes/category")
+>>>>>>> new
 const cartRoute = require("./routes/cart")
 const orderRoute = require("./routes/order")
 const stripeRoute = require("./routes/stripe")
@@ -28,6 +32,10 @@ app.use("/api/products", productRoute)
 app.use("/api/carts", cartRoute)                
 app.use("/api/orders", orderRoute)    
 app.use("/api/checkout", stripeRoute)    
+<<<<<<< HEAD
+=======
+app.use("/api/categories", categoryRoute)                
+>>>>>>> new
 
 mongoose.connect(process.env.MONGO_URL
 ).then(()=>console.log("DBConnection Successfull")).catch((err)=>{

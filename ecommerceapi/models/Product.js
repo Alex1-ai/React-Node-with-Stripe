@@ -14,6 +14,20 @@ const ProductSchema = new mongoose.Schema(
         color: {type:Array},
         price: {type:Number, required: true},
         inStock:{type:Boolean, default: true},
+<<<<<<< HEAD
+=======
+        rating: [
+            {
+                user:{
+                    type:mongoose.Schema.Types.ObjectId,
+                    ref:"User"
+                },
+                stars:{type: Number},
+                message:{type:String},
+
+            }
+        ]
+>>>>>>> new
         
     
     }, {
